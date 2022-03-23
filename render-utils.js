@@ -47,10 +47,11 @@ export function renderBookDetail(book) {
 
     div.append(
         titleEl,
-        pagesEl,
+        img,
         genreEl,
-        quoteEl,
-        authorEl
+        pagesEl,
+        authorEl,
+        quoteEl
     );
 
     return div;

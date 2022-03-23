@@ -131,7 +131,8 @@ p {
 
 .book-detail img {
     margin: 40px;
-    width: 80%; 
+    width: 80%;
+    /* height: 500px; */
 }
 
 
