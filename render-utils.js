@@ -8,7 +8,7 @@ export function renderBookCard(book) {
 
     p.textContent = book.name;
     img.src = `./assets/${book.img}`;
-    a.href = `./detail/?id=${book.id}`;
+    a.href = `./book-detail/?id=${book.id}`;
 
     div.append(p, img);
 

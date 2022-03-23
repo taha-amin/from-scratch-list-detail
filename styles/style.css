@@ -1,15 +1,5 @@
-
 body {
-    /* feel free to update these css variables for a quick theme */
-    
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
-    
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-        
     /* --color1: hsla(349, 69%, 76%, 1);
     --color2: hsla(207, 67%, 44%, 1);
     --color3: hsla(200, 61%, 56%, 1);
@@ -28,7 +18,10 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-image: url('../assets/bg.png');
+    background-size: 600px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
 }
 
 main {
@@ -36,31 +29,45 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
     margin-bottom: calc(var(--footer-height));
 }
 
 section {
-    background-color: var(--color5);
+    background-color: white;
+    height: 100%;
     max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+}
+
+a {
+    text-decoration: none;
+    color: black
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content: center;
+    align-items: flex-start;
+    background-color: orange;
     height: var(--header-height);
     box-shadow: var(--shadow);
+    height: 100%;
+    width: 150px;
+    top: 0;
 }
 
+header a {
+    font-weight: 900;
+    color: black;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -71,21 +78,65 @@ h2 {
     margin-right: 20px;
 }
 
-header img {
-    height: var(--header-height);
+p {
+    margin: 0px
 }
 
-p {
-    margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
+#book-list-container {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 50px;
+}
+
+.book-card {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: solid 1px black;
+    width: 200px;
+    height: 200px;
+}
+
+.book-card img {
+    width: 90%;
+    border-radius: 20px;
+}
+
+.book-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.book-detail .title {
+    font-size: 2rem;
+}
+
+.book-detail .author {
+    height: 50px;
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book-detail img {
+    margin: 40px;
+    width: 80%; 
+}
+
+
+.book-detail .quote {
+    font-size: 1.2rem;
+    margin: 20px;
+    padding: 20px;
 }

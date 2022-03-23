@@ -8,7 +8,7 @@ export async function getBooks() {
         .from('books')
         .select('*');
 
-    return checkError(response);
+    return response.body;
 }
 
 export async function getBook(id) {
@@ -18,9 +18,9 @@ export async function getBook(id) {
         .match({ id: id })
         .single();
 
-    return checkError(response);
+    return response.body;
 }
 
-function checkError({ data, error }) {
-    return error ? console.error(error) : data;
-}
+// function checkError({ data, error }) {
+//     return error ? console.error(error) : data;
+// }
