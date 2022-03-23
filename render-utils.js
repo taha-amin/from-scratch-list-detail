@@ -7,7 +7,7 @@ export function renderBookCard(book) {
     div.classList.add('book-card');
 
     p.textContent = book.name;
-    img.src = `./assets/${book.title}.png`;
+    img.src = `./assets/${book.img}`;
     a.href = `./detail/?id=${book.id}`;
 
     div.append(p, img);
@@ -43,7 +43,7 @@ export function renderBookDetail(book) {
     authorEl.textContent = `Author: ${book.author}`;
     authorEl.classList.add('author');
 
-    img.src = `../assets/${book.title}.png`;
+    img.src = `../assets/${book.img}`;
 
     div.append(
         titleEl,
